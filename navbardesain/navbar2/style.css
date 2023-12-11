@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 15px;
+  color: white;
+  background-color: #333;
+  display: block;
+}
+
+.navbar {
+  overflow: hidden;
+}
+
+.menu {
+  float: left;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 15px;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  border-bottom: 1px solid #666;
+}
+
+#menu-toggle:checked + .menu {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+  }
+
+  .menu li {
+    float: none;
+  }
+}
